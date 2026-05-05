@@ -1,0 +1,991 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="COLD LEDGER — A Nigerian Corporate Psychological Thriller. Complete 5-Season Series Script by dre2477." />
+  <title>COLD LEDGER — Complete Series Script</title>
+  <style>
+    :root {
+      --gold: #C9A84C;
+      --dark: #0a0a0a;
+      --surface: #111111;
+      --card: #1a1a1a;
+      --border: #2a2a2a;
+      --text: #e8e8e8;
+      --muted: #888888;
+      --accent: #C9A84C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: var(--dark);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    /* ── HEADER ── */
+    .hero {
+      background: linear-gradient(180deg, #1a1200 0%, #0a0a0a 100%);
+      border-bottom: 1px solid var(--border);
+      padding: 60px 24px 50px;
+      text-align: center;
+    }
+
+    .hero-tag {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 8vw, 5.5rem);
+      font-weight: 900;
+      letter-spacing: -1px;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span { color: var(--gold); }
+
+    .hero-sub {
+      font-size: clamp(0.85rem, 2.5vw, 1.1rem);
+      color: var(--muted);
+      font-style: italic;
+      margin: 18px auto 0;
+      max-width: 500px;
+    }
+
+    .tagline {
+      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+      color: var(--gold);
+      margin-top: 28px;
+      font-style: italic;
+    }
+
+    /* ── META BAR ── */
+    .meta-bar {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 20px 24px;
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .meta-pill {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--muted);
+      padding: 6px 16px;
+      border-radius: 20px;
+    }
+
+    /* ── MAIN LAYOUT ── */
+    .wrapper {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+
+    /* ── SEASON CARDS ── */
+    .seasons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin: 48px 0 56px;
+    }
+
+    @media (min-width: 640px) {
+      .seasons-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .season-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px 20px;
+      transition: border-color 0.2s;
+      cursor: pointer;
+    }
+
+    .season-card:hover { border-color: var(--gold); }
+
+    .season-num {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .season-title {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .season-years {
+      font-size: 0.8rem;
+      color: var(--muted);
+      font-family: 'Helvetica Neue', sans-serif;
+      margin-bottom: 10px;
+    }
+
+    .season-desc {
+      font-size: 0.88rem;
+      color: #aaa;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    /* ── CHARACTERS SECTION ── */
+    .section-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 24px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .char-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+      margin-bottom: 56px;
+    }
+
+    @media (min-width: 560px) {
+      .char-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .char-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px;
+    }
+
+    .char-name {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .char-role {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+
+    .char-desc {
+      font-size: 0.85rem;
+      color: #aaa;
+      line-height: 1.6;
+    }
+
+    .char-flaw {
+      margin-top: 10px;
+      font-size: 0.8rem;
+      color: #c0392b;
+      font-style: italic;
+    }
+
+    /* ── SCENE / DIALOGUE BLOCKS ── */
+    .script-section {
+      margin-bottom: 56px;
+    }
+
+    .episode-header {
+      background: linear-gradient(135deg, #1a1200 0%, #1a1a1a 100%);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin-bottom: 28px;
+    }
+
+    .episode-num {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .episode-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .episode-meta {
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-style: italic;
+    }
+
+    /* ── VOICEOVER ── */
+    .vo-block {
+      background: #0f0d00;
+      border-left: 3px solid var(--gold);
+      border-radius: 0 8px 8px 0;
+      padding: 20px 24px;
+      margin: 24px 0;
+      font-style: italic;
+      color: #ccc;
+      font-size: 0.95rem;
+      line-height: 1.9;
+    }
+
+    .vo-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 10px;
+      font-style: normal;
+    }
+
+    /* ── DIALOGUE ── */
+    .dialogue-block {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+      font-size: 0.9rem;
+    }
+
+    .dialogue-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 14px;
+    }
+
+    .dl { margin-bottom: 14px; }
+    .dl:last-child { margin-bottom: 0; }
+
+    .speaker {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 4px;
+    }
+
+    .line { color: #ccc; line-height: 1.7; }
+    .stage { color: var(--muted); font-style: italic; font-size: 0.82rem; }
+
+    /* ── IMAGE PROMPT ── */
+    .img-prompt {
+      background: #0a0f1a;
+      border: 1px solid #1a2a3a;
+      border-radius: 10px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-size: 0.83rem;
+      color: #7ab3d4;
+      line-height: 1.7;
+      font-style: italic;
+    }
+
+    .img-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #4a8ab0;
+      margin-bottom: 10px;
+      font-style: normal;
+    }
+
+    /* ── CAMERA DIRECTION ── */
+    .camera-block {
+      background: #0a100a;
+      border: 1px solid #1a2a1a;
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin: 14px 0;
+      font-size: 0.82rem;
+      color: #6db56d;
+      font-style: italic;
+      line-height: 1.6;
+    }
+
+    .cam-label {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 9px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #3a7a3a;
+      margin-bottom: 8px;
+      font-style: normal;
+    }
+
+    /* ── PRODUCTION NOTES ── */
+    .prod-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0;
+      font-size: 0.85rem;
+    }
+
+    .prod-table th {
+      background: var(--card);
+      color: var(--gold);
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .prod-table td {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      color: #bbb;
+      vertical-align: top;
+    }
+
+    .prod-table tr:last-child td { border-bottom: none; }
+
+    /* ── CTA BUTTONS ── */
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 40px 0 56px;
+      justify-content: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #000;
+      font-weight: bold;
+    }
+
+    .btn-primary:hover { background: #e0bc6a; }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--gold);
+      border: 1px solid var(--gold);
+    }
+
+    .btn-secondary:hover { background: rgba(201,168,76,0.1); }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 48px 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 24px;
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+    }
+
+    footer a { color: var(--gold); text-decoration: none; }
+
+    /* ── SCROLL TOC ── */
+    .toc {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 40px 0 56px;
+    }
+
+    .toc-title {
+      font-family: 'Helvetica Neue', sans-serif;
+      font-size: 10px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 16px;
+    }
+
+    .toc a {
+      display: block;
+      color: #bbb;
+      text-decoration: none;
+      padding: 7px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.88rem;
+      transition: color 0.15s;
+    }
+
+    .toc a:last-child { border-bottom: none; }
+    .toc a:hover { color: var(--gold); }
+    .toc a span { color: var(--gold); font-size: 0.78rem; margin-right: 8px; }
+
+    /* ── RESPONSIVE TWEAKS ── */
+    @media (max-width: 480px) {
+      .hero { padding: 48px 18px 40px; }
+      .wrapper { padding: 0 16px 60px; }
+      .dialogue-block, .vo-block { padding: 16px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════ HERO ═══════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-tag">A Nigerian Corporate Psychological Thriller</div>
+  <h1>COLD <span>LEDGER</span></h1>
+  <div class="hero-sub">Complete 5-Season Series Script</div>
+  <div class="tagline">"Every empire is built on someone else's silence."</div>
+</div>
+
+<!-- META BAR -->
+<div class="meta-bar">
+  <span class="meta-pill">5 Seasons</span>
+  <span class="meta-pill">Lagos, Nigeria 2004–2026</span>
+  <span class="meta-pill">Corporate Thriller</span>
+  <span class="meta-pill">Human Psychology</span>
+  <span class="meta-pill">Psychological Drama</span>
+</div>
+
+<!-- ═══════════════════════════════════ MAIN ═══════════════════════════════════ -->
+<div class="wrapper">
+
+  <!-- CTA BUTTONS -->
+  <div class="cta-row" style="margin-top:48px;">
+    <a href="COLD_LEDGER_Complete_Series.md" class="btn btn-primary">📄 Read Full Script</a>
+    <a href="https://github.com/dre2477/cold-ledger-scripts" class="btn btn-secondary">⭐ View on GitHub</a>
+  </div>
+
+  <!-- TABLE OF CONTENTS -->
+  <div class="toc">
+    <div class="toc-title">Contents</div>
+    <a href="#overview"><span>01</span> Series Overview & Central Question</a>
+    <a href="#characters"><span>02</span> Character Profiles</a>
+    <a href="#season1"><span>03</span> Season 1 — "The Hunger" (2004–2012)</a>
+    <a href="#season2"><span>04</span> Season 2 — "The Fracture" (2015–2018)</a>
+    <a href="#season3"><span>05</span> Season 3 — "Cold Ledger" (2019–2022)</a>
+    <a href="#season4"><span>06</span> Season 4 — "The War After the War" (2022–2024)</a>
+    <a href="#season5"><span>07</span> Season 5 — "Empire's End" (2025–2026)</a>
+    <a href="#production"><span>08</span> Production Notes</a>
+  </div>
+
+  <!-- ═══ OVERVIEW ═══ -->
+  <div id="overview" class="script-section">
+    <div class="section-label">Series Overview</div>
+
+    <p style="color:#bbb; margin-bottom:20px; font-size:0.95rem;">
+      <strong style="color:#fff;">Genre:</strong> Corporate Psychological Thriller &nbsp;|&nbsp;
+      <strong style="color:#fff;">Tone:</strong> <em>Succession</em> meets <em>House of Cards</em> — rooted entirely in Nigerian business culture, class anxiety, and the terrifying intimacy of people who built something together.
+    </p>
+
+    <div class="vo-block">
+      <div class="vo-label">Central Question</div>
+      When you are the most qualified person in the room, does that give you the right to take what belongs to someone else?
+    </div>
+
+    <!-- SEASON CARDS -->
+    <div id="seasons" class="seasons-grid">
+      <div class="season-card">
+        <div class="season-num">Season One</div>
+        <div class="season-title">"The Hunger"</div>
+        <div class="season-years">2004 – 2012 · 8 Episodes</div>
+        <div class="season-desc">How two people built something extraordinary — and started to break it.</div>
+      </div>
+      <div class="season-card">
+        <div class="season-num">Season Two</div>
+        <div class="season-title">"The Fracture"</div>
+        <div class="season-years">2015 – 2018 · 8 Episodes</div>
+        <div class="season-desc">The dual game begins. Chika's moves have two meanings. The empire expands recklessly.</div>
+      </div>
+      <div class="season-card">
+        <div class="season-num">Season Three</div>
+        <div class="season-title">"Cold Ledger"</div>
+        <div class="season-years">2019 – 2022 · 10 Episodes</div>
+        <div class="season-desc">The full war. The boardroom betrayal. And nothing is as it seems.</div>
+      </div>
+      <div class="season-card">
+        <div class="season-num">Season Four</div>
+        <div class="season-title">"The War After the War"</div>
+        <div class="season-years">2022 – 2024 · 8 Episodes</div>
+        <div class="season-desc">Aftermath. Retaliation. Unexpected alliances — and the most dangerous character in the series.</div>
+      </div>
+      <div class="season-card" style="grid-column: 1 / -1;">
+        <div class="season-num">Season Five — Series Finale</div>
+        <div class="season-title">"Empire's End"</div>
+        <div class="season-years">2025 – 2026 · 8 Episodes (Double Finale)</div>
+        <div class="season-desc">The truth. The consequence. And the question the entire series was asking — what survives when everything burns?</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ CHARACTERS ═══ -->
+  <div id="characters" class="script-section">
+    <div class="section-label">Character Profiles</div>
+
+    <div class="char-grid">
+      <div class="char-card">
+        <div class="char-name">Tunde Adebayo</div>
+        <div class="char-role">Founder & Chairman — 52</div>
+        <div class="char-desc">6'2". Built an empire from a secondhand briefcase. Moves like a man who learned long ago that rushing is a signal of weakness. His eyes hold a question no one wants to answer.</div>
+        <div class="char-flaw">Fatal flaw: Cannot accept being wrong. Would rather burn the building than admit the foundation cracked.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-name">Chika Okafor</div>
+        <div class="char-role">CFO — 44</div>
+        <div class="char-desc">Elegant, precise. Dresses to disappear until the moment she doesn't. Watched her father's wealth destroy her family at fifteen. Made herself the most dangerous kind of person — one who believes their intelligence makes them morally correct.</div>
+        <div class="char-flaw">Fatal flaw: Cannot distinguish between protecting something and owning it.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-name">Emeka Adebayo</div>
+        <div class="char-role">Tunde's Son — 28</div>
+        <div class="char-desc">The son who was born into the answer and is still looking for the question. Both Tunde and Chika want his loyalty. Neither is entirely honest with him. The most human character in the series.</div>
+        <div class="char-flaw">His role: The pivot point. The moral mirror.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-name">Yetunde Adebayo</div>
+        <div class="char-role">Tunde's Wife — 50</div>
+        <div class="char-desc">Former Zenith Bank executive. Saw everything. Spoke too late. Everyone underestimates her. It is the smartest thing she ever arranged.</div>
+        <div class="char-flaw">Fatal flaw: Waited too long to demand to be heard.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-name">Victor Nwosu</div>
+        <div class="char-role">External Counsel — 39</div>
+        <div class="char-desc">No ideology. No loyalty except to outcome. He serves whoever holds the pen. The most honest character in the series — honest about exactly what he is.</div>
+        <div class="char-flaw">He was working a third side the entire time.</div>
+      </div>
+      <div class="char-card">
+        <div class="char-name">Stella Okafor</div>
+        <div class="char-role">Journalist — 42</div>
+        <div class="char-desc">Chika's younger sister. Same wound, different response. Where Chika built walls, Stella built windows. She does not yet know her sister is becoming the thing they both feared.</div>
+        <div class="char-flaw">The witness. The truth-teller. The reckoning.</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SEASON 1 ═══ -->
+  <div id="season1" class="script-section">
+    <div class="section-label">Season One — 2004–2012</div>
+
+    <!-- Ep 1 -->
+    <div class="episode-header">
+      <div class="episode-num">Episode 1</div>
+      <div class="episode-title">"Secondhand Briefcase"</div>
+      <div class="episode-meta">2004. Lagos. Before the empire.</div>
+    </div>
+
+    <div class="vo-block">
+      <div class="vo-label">Voiceover — Chika, Present Day</div>
+      "People ask me when it began. The plan. The decision. They imagine I woke up one morning with a knife in my hand. But that is not how these things happen. They happen the way all slow disasters happen — gradually, and then all at once. The way a marriage dies. The way a river floods. The way a man you once respected becomes the reason you cannot sleep."
+    </div>
+
+    <div class="img-prompt">
+      <div class="img-label">Image Prompt for Gemini — Scene 1.1</div>
+      Cinematic wide shot, golden hour, Apapa Lagos waterfront 2004. Corrugated iron rooftops stretching toward distant port cranes silhouetted against an orange-pink sky. Yellow danfos, hawkers, smoke from roadside suya grills. Painterly, slightly hazy light. Film grain texture. Color palette: burnt orange, rust red, pale gold, deep shadow blue. Mood: hunger and possibility.
+    </div>
+
+    <div class="camera-block">
+      <div class="cam-label">Camera Direction</div>
+      WIDE ESTABLISHING SHOT — drone descending slowly through Lagos morning smog, tilting down toward a single figure on a street below. Then LOW ANGLE TRACKING SHOT — camera moves at street level alongside Tunde's feet, then rises slowly to frame his face.
+    </div>
+
+    <div class="dialogue-block">
+      <div class="dialogue-label">Dialogue — Scene 1.2: The Reception</div>
+      <div class="dl">
+        <div class="speaker">Receptionist</div>
+        <div class="line">Yes?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Young Tunde <span class="stage">(without breaking stride)</span></div>
+        <div class="line">I have a nine o'clock with Mr. Fashola.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Receptionist <span class="stage">(checks book)</span></div>
+        <div class="line">I don't have your name here.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Young Tunde <span class="stage">(pause — looks at her directly)</span></div>
+        <div class="line">Then Mr. Fashola will have two conversations with me today. The one we scheduled — and the one about why his receptionist turned away the man who just secured him twelve thousand barrels.</div>
+      </div>
+      <div class="dl stage">(Beat. She picks up the phone.)</div>
+    </div>
+
+    <div class="vo-block">
+      <div class="vo-label">Voiceover — Tunde, Present Day</div>
+      "My father left on a Tuesday. I remember because it was the day before he was supposed to sign my school fees form. I signed it myself — traced his signature from an old document. That was the day I learned that a signature is not a person. It is a performance of certainty. And certainty is something you can teach yourself."
+    </div>
+
+    <!-- First Meeting -->
+    <div class="episode-header" style="margin-top:40px;">
+      <div class="episode-num">Scene 1.10</div>
+      <div class="episode-title">The First Conversation</div>
+      <div class="episode-meta">2009 — Tunde's Office, Victoria Island</div>
+    </div>
+
+    <div class="img-prompt">
+      <div class="img-label">Image Prompt for Gemini</div>
+      Interior, Tunde's office, top floor, morning light. Large clean desk — almost empty, deliberate power statement. Young Chika, 27, sits in a chair, straight-backed, document folder on her lap, expression composed. Tunde, 35, stands by the floor-to-ceiling window, Lagos spread behind him. Warm morning light. Long shadows. Mood: the moment two minds recognize each other. Color palette: warm mahogany tones, the blue-silver of Lagos outside.
+    </div>
+
+    <div class="camera-block">
+      <div class="cam-label">Camera Direction</div>
+      WIDE SHOT holding both figures — Chika in foreground, Tunde across the room by the window. The space between them is alive. Then ALTERNATING CLOSE-UPS — Chika's hands on the folder, steady; Tunde's eyes, reading her.
+    </div>
+
+    <div class="dialogue-block">
+      <div class="dialogue-label">Dialogue — The First Conversation</div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(by the window, not turning yet)</span></div>
+        <div class="line">You've been here how long?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika</div>
+        <div class="line">Twenty-two hours.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(turns)</span></div>
+        <div class="line">And in those twenty-two hours you found something four senior analysts missed for three months.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika</div>
+        <div class="line">They didn't miss it. They saw it. They just didn't know if they were supposed to say it.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">What's the difference?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika</div>
+        <div class="line">Permission. They were waiting for permission. I wasn't hired to wait for permission. I was hired to read numbers. Numbers don't give permission.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">What do numbers give?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika <span class="stage">(a beat)</span></div>
+        <div class="line">Truth. Even when the person reading them doesn't want it.</div>
+      </div>
+    </div>
+
+    <div class="vo-block">
+      <div class="vo-label">Voiceover — Chika, Closing Episode 1</div>
+      "People study the fall. They want to know when a great man breaks — what was the moment, what was the word, what was the choice. But the fall is not where the story begins. The story begins in the morning meetings. In the work sessions. In the first time someone sees you and says — you are more than what this room says you are. That is where it begins. In the gift. Not in the taking of it back."
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SEASON 3 KEY SCENE ═══ -->
+  <div id="season3" class="script-section">
+    <div class="section-label">Season Three — 2019–2022</div>
+
+    <div class="episode-header">
+      <div class="episode-num">Episode 4 — The Scene the Series Was Built For</div>
+      <div class="episode-title">"Face to Face"</div>
+      <div class="episode-meta">48 Hours Before the Vote</div>
+    </div>
+
+    <div class="img-prompt">
+      <div class="img-label">Image Prompt for Gemini</div>
+      Tunde's private conference room, Adebayo Group, Lagos, evening. Two people facing each other across a table cleared of everything except a single folder between them. TUNDE standing — he has been standing when she arrived, a deliberate choice. CHIKA seated — also a deliberate choice. Both fully composed. Glass walls on two sides, the Lagos skyline beyond. People passing outside — oblivious. The privacy of a glass room where nobody can hear. Overhead track lighting, cold and even. Mood: two extraordinary people at the absolute limit of what they built together. Color palette: cool white track light, gray glass walls, black suits, blue-silver Lagos evening, single white folder on the table.
+    </div>
+
+    <div class="camera-block">
+      <div class="cam-label">Camera Direction</div>
+      OPENS on the folder on the table. Two hands on opposite sides of the table. Then SLOW RISE to both faces. Both still. Both watching the other. Then — a long hold on this composition. Two people. One room. The empire between them.
+    </div>
+
+    <div class="dialogue-block">
+      <div class="dialogue-label">Dialogue — The Confrontation (Full Scene)</div>
+      <div class="dl stage">(He speaks first. He always speaks first.)</div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">Close the door.</div>
+      </div>
+      <div class="dl stage">(She already closed it. She says nothing.)</div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">When.</div>
+      </div>
+      <div class="dl stage">(It is not a question.)</div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">When did you decide to take this company from me?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika</div>
+        <div class="line">I decided to restructure the governance of this company when the chairman began making two-hundred-and-sixty-billion naira decisions that his CFO found out about through press releases.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(quieter — and this is worse)</span></div>
+        <div class="line">I trusted you with everything. You were in my home. You were at my family's table. You were the person I brought to London when I wanted the room to see the best version of what this company was.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">Why?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika <span class="stage">(the first unguarded moment)</span></div>
+        <div class="line">Because you were going to destroy it.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika <span class="stage">(standing — matching him)</span></div>
+        <div class="line">Your CFO was trying to save the company from a chairman who has been replacing risk management with ego!</div>
+      </div>
+      <div class="dl stage">(The room holds that for a moment. Loud. Finally loud.)</div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(very quietly)</span></div>
+        <div class="line">You fixed it — therefore you own it. Is that the logic?</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika <span class="stage">(the most honest thing she has said in the series)</span></div>
+        <div class="line">I don't know. I don't know if that's the logic. I know that every time I fixed something, I was less sure that the thing I was protecting — was being protected. I know that I looked at this company and I saw what it could be — and I—</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(very quietly)</span></div>
+        <div class="line">You wanted it.</div>
+      </div>
+      <div class="dl stage">(The silence is full.)</div>
+      <div class="dl">
+        <div class="speaker">Chika <span class="stage">(barely audible)</span></div>
+        <div class="line">Yes.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">Get out of my building, Chika. The vote is in forty-eight hours. We will not speak again until we speak in that boardroom.</div>
+      </div>
+    </div>
+
+    <div class="vo-block">
+      <div class="vo-label">Voiceover — Tunde</div>
+      "She said yes. After everything — she said yes. And I want to tell you that in that moment I hated her. I want to tell you that because it would be cleaner. But the honest answer is that in that moment I understood her. I understood exactly who she was and why she had done what she'd done. And the understanding was more painful than the betrayal. Because understanding someone who has hurt you means you cannot even have your anger clean."
+    </div>
+
+    <!-- THE VOTE -->
+    <div class="episode-header" style="margin-top:40px;">
+      <div class="episode-num">Episode 7</div>
+      <div class="episode-title">"Six to One"</div>
+      <div class="episode-meta">The Vote That Tears Everything Open</div>
+    </div>
+
+    <div class="dialogue-block">
+      <div class="dialogue-label">Dialogue — The Vote</div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(calmly interrupting)</span></div>
+        <div class="line">Before the vote — I have a statement for the record.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">I built this company with thirty thousand naira, two relationships, and a secondhand briefcase. I have built it over twenty-two years into a group with four point seven billion dollars in assets, seven hundred and forty employees, and operations in six sectors.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">What I will not accept is the suggestion that gratitude — or even indebtedness — is the same as surrender. I did not build this company to hand it to someone who built a plan inside my house while sitting at my table. If there are members of this board who believe the governance of this company requires the mechanism being put forward today — I invite them to say so to my face. Not through proxy agreements. Not through secondary counsel. To my face.</div>
+      </div>
+      <div class="dl stage">(Six hands rise. Then:)</div>
+      <div class="dl">
+        <div class="speaker">Board Secretary</div>
+        <div class="line">Those opposed—</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(raising his hand — his own vote, against the motion)</span></div>
+        <div class="line">One.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Board Secretary</div>
+        <div class="line">The motion carries — six votes in favor, one opposed, five abstentions. Special Resolution 4 is passed.</div>
+      </div>
+    </div>
+
+    <div class="vo-block">
+      <div class="vo-label">Voiceover — Chika</div>
+      "I won. Six to one. That is the number that history will record. And in the moment the Secretary announced it — the thing I expected to feel was absent. I expected clarity. The clarity of a completed mission. What I felt instead was a specific, sharp, irreversible knowledge: the man at the other end of that table would spend the rest of his life as the man who was voted out of his own company. And that his one vote would be the most important vote of his life. Not because it changed the result. But because it was the last act of a man who refused to surrender. I had won everything. And in winning, I had become the thing I grew up afraid of."
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ SEASON 5 FINALE ═══ -->
+  <div id="season5" class="script-section">
+    <div class="section-label">Season Five — Series Finale</div>
+
+    <div class="episode-header">
+      <div class="episode-num">Episode 8 — Series Finale</div>
+      <div class="episode-title">"The Last Meeting"</div>
+      <div class="episode-meta">A rooftop. Lagos. The only honest conversation they ever had.</div>
+    </div>
+
+    <div class="img-prompt">
+      <div class="img-label">Image Prompt for Gemini — Final Scene</div>
+      Rooftop restaurant terrace, Lagos Island, evening. The city spread below — the lagoon, island lights showing in blue-going-gold dusk. A single table. Two chairs. TUNDE, 52, in dark agbada — formal wear of an elder, chosen deliberately. CHIKA, 44, in a simple dress — not the armor of a suit. Both older than at the series start. Not broken. Weathered. Behind them: Lagos at dusk, beautiful and indifferent. Mood: two people who will never be fully at peace but can be, for one hour, fully honest. Color palette: Lagos dusk gold and blue, the worn warmth of the terrace, two people in the last light.
+    </div>
+
+    <div class="camera-block">
+      <div class="cam-label">Camera Direction — Final Scene</div>
+      WIDE SHOT — the terrace, the city, two small figures at the table. Then SLOWLY MOVING IN over the course of the scene — until the final shot holds both faces, close, the city behind them going dark. TIGHTEST shot of the series — EXTREME CLOSE-UP on Chika's face. The city lights reflected in her eyes. Every year of the series in that face. Then SLOW PULL BACK — wider, wider — until she is small again and the city is enormous around her.
+    </div>
+
+    <div class="dialogue-block">
+      <div class="dialogue-label">Dialogue — The Final Scene</div>
+      <div class="dl">
+        <div class="speaker">Chika</div>
+        <div class="line">I was wrong.</div>
+      </div>
+      <div class="dl stage">(He is very still.)</div>
+      <div class="dl">
+        <div class="speaker">Chika</div>
+        <div class="line">Not about the governance issues. Not about the risk assessment. Those were real and I would document them the same way today. But the decision to — to use what I had access to, to build around you instead of with you—</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(quietly)</span></div>
+        <div class="line">Was what your father did.</div>
+      </div>
+      <div class="dl stage">(The air goes very still.)</div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">I made it possible. I need to say that. I dismissed the warnings — yours, Yetunde's, my own instincts. I chose comfort over accuracy every time the numbers told me something difficult. You were not wrong about that. I was building on arrogance by the end and I knew it. I chose not to know it.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde</div>
+        <div class="line">You are the most brilliant person I have ever worked with. That is a fact and it will remain a fact regardless of what the courts decide in March.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Chika <span class="stage">(barely above a whisper)</span></div>
+        <div class="line">Thank you.</div>
+      </div>
+      <div class="dl">
+        <div class="speaker">Tunde <span class="stage">(standing)</span></div>
+        <div class="line">See you in March.</div>
+      </div>
+      <div class="dl stage">(He goes. She stays. The city fully dark now.)</div>
+    </div>
+
+    <div class="vo-block">
+      <div class="vo-label">Series Final Voiceover — Chika</div>
+      "People will write about this as a story about power. About what happens when ambition runs ahead of ethics. They will use our names as cautionary tales. Fine. Let them.<br><br>
+      What they will miss is that it was also a story about two people who spoke the same language and forgot, somewhere in the middle of all that building, that speaking the same language is not the same as having the same heart.<br><br>
+      Tunde built an empire. I tried to inherit it without being given it. We were both wrong in the ways that brilliant, wounded people are wrong — completely, and with total conviction.<br><br>
+      But in the column labeled — things I understand about what it means to be human — the balance is, I think, finally, coming right."
+    </div>
+
+    <div class="img-prompt" style="margin-top:32px;">
+      <div class="img-label">Final Image Prompt for Gemini</div>
+      Lagos aerial shot, present day — the city at blue-hour before dawn. Wide, sweeping, the island and the mainland and the water between them. The lights of Adebayo Group visible — one lit building among thousands. No names. No people. Just the city, going on. Above it all: the sky just beginning to lighten at the edge of the world. Color palette: deep blue, the warm orange of city light, the first pale gold of dawn on the horizon's edge. Mood: the end of a particular story. The continuation of all the others.
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ═══ PRODUCTION NOTES ═══ -->
+  <div id="production" class="script-section">
+    <div class="section-label">Production Notes</div>
+
+    <p class="section-label" style="margin-top:0; border:none;">Visual Symbolism</p>
+    <table class="prod-table">
+      <thead><tr><th>Symbol</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>Documents / Paper</td><td>Power made physical — who holds the paper holds the truth</td></tr>
+        <tr><td>Lagos at Dawn</td><td>Possibility, before choices are made</td></tr>
+        <tr><td>Lagos at Night</td><td>The city's indifference to individual suffering</td></tr>
+        <tr><td>Glass Walls</td><td>Power that appears transparent but contains</td></tr>
+        <tr><td>Water / Lagoon</td><td>Time. Memory. What persists beneath the surface</td></tr>
+        <tr><td>Hands</td><td>Trust, signing, holding, letting go</td></tr>
+      </tbody>
+    </table>
+
+    <p class="section-label" style="margin-top:32px; border:none;">Color Palette by Season</p>
+    <table class="prod-table">
+      <thead><tr><th>Season</th><th>Palette</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>1 — The Hunger</td><td>Amber, gold, rust</td><td>Hunger, warmth, possibility</td></tr>
+        <tr><td>2 — The Fracture</td><td>Cool blues introduced</td><td>Calculation beneath the warmth</td></tr>
+        <tr><td>3 — Cold Ledger</td><td>Gray, clinical white, cold blue</td><td>The war in its surgical form</td></tr>
+        <tr><td>4 — War After War</td><td>Warm and cold in same frame</td><td>The human complexity of aftermath</td></tr>
+        <tr><td>5 — Empire's End</td><td>Full spectrum</td><td>The world does not categorize neatly</td></tr>
+      </tbody>
+    </table>
+
+    <p class="section-label" style="margin-top:32px; border:none;">Music by Season</p>
+    <table class="prod-table">
+      <thead><tr><th>Season</th><th>Score</th><th>Meaning</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Yoruba percussion + sparse piano</td><td>The hunger of building</td></tr>
+        <tr><td>2</td><td>Piano motif grows more dissonant</td><td>Harmony beginning to fracture</td></tr>
+        <tr><td>3</td><td>Full orchestral, then near-silence</td><td>The war</td></tr>
+        <tr><td>4</td><td>Stripped back — guitar, single voice</td><td>The aftermath</td></tr>
+        <tr><td>5</td><td>Season 1 motif returns — but slower</td><td>Same notes. Different meaning.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="cta-row">
+    <a href="COLD_LEDGER_Complete_Series.md" class="btn btn-primary">📄 Download Full Script</a>
+    <a href="https://github.com/dre2477/cold-ledger-scripts" class="btn btn-secondary">⭐ Star on GitHub</a>
+  </div>
+
+</div><!-- /wrapper -->
+
+<!-- FOOTER -->
+<footer>
+  <p>COLD LEDGER &nbsp;·&nbsp; Created by <a href="https://github.com/dre2477">dre2477</a> &nbsp;·&nbsp; May 2026</p>
+  <p style="margin-top:8px; color:#555;">"Every empire is built on someone else's silence."</p>
+</footer>
+
+</body>
+</html>
